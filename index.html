@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Event</title>  
+  <script type="text/javascript">
+   function count(){
+       var d="";
+       var a=document.getElementById("txt1").value;
+       //Get the value of the first input box
+       var b=document.getElementById("txt2").value;
+	   //Get the value of the second input box
+       var c=document.getElementById("select").value;
+	   //Get the value of the select box
+	   switch(c)
+	   {
+	   case "+":
+	   //d=a+b;
+	   d=parseInt(a)+parseInt(b);
+	   break;
+	   case "-":
+	   //d=a-b;
+	   d=parseInt(a)-parseInt(b);
+	   break;
+	   case "*":
+	   //d=a-b;
+	   d=parseInt(a)-parseInt(b);
+	   break;
+	   default:
+	   //d=a/b;
+	   d=parseInt(a)/parseInt(b);
+	   }
+	   //Get the value selected through the drop-down box to change the algorithm of addition, subtraction, multiplication and division
+       document.getElementById("fruit").value=d;
+       //Set the value of the result input box
+   }
+  </script> 
+ </head> 
+ <body>
+   <input type='text' id='txt1' /> 
+   <select id='select'>
+		<option value='+'>+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+   </select>
+   <input type='text' id='txt2' /> 
+   <input type='button' value=' = ' onclick="count()"/> <!--Use the = button to call the created function and get the result -->
+   <input type='text' id='fruit' />   
+ </body>
+</html>
